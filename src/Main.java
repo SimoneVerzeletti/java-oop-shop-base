@@ -12,7 +12,7 @@ public class Main {
         colla.nome = "Colla super star";
         colla.descrizione = "Serve per incollare cose.";
         colla.prezzo = 3.15;
-        colla.iva = 10;
+        colla.iva = 10.1;
 
         Prodotto caricabatterie = new Prodotto();
         caricabatterie.codice = 151654;
@@ -23,6 +23,5 @@ public class Main {
 
 
 
-        System.out.println(getNomeEsteso);
     }
 }
