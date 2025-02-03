@@ -9,12 +9,12 @@ public class Prodotto {
     
     public String descrizione;
     
-    public Double prezzo;
+    public double prezzo;
     
-    public Double  iva;  
+    public double  iva;  
 
     //costruttore
-    public Prodotto(int codice, String nome, String descrizione, Double prezzo, Double iva){
+    public Prodotto(String nome, String descrizione, double prezzo, double iva){
         Random ran = new Random();
         this.codice = ran.nextInt(1000, 9999);
         this.nome = nome;
@@ -24,11 +24,20 @@ public class Prodotto {
     }
   
     //metodi
-     public Double getPrezzoBase() {
+    public String getNome(){
+        return nome;
+    }
+    public String getDescrizione(){
+        return descrizione;
+    }    
+     public double getPrezzoBase() {
         return prezzo;
     }
-    public Double getPrezzoIva(){
+    public double getPrezzoIva(){
         return prezzo + (prezzo * iva / 100);
+    }
+    public int getCodice(){
+        return codice;
     }
     public String getNomeEsteso(){
         return codice + "-" + nome;
